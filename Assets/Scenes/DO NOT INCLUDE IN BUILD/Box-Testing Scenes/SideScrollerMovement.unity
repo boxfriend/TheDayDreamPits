@@ -331,11 +331,11 @@ MonoBehaviour:
   _jumpPower: 10
   _fallForce: 5
   _rigidbody2d: {fileID: 1678597579}
-  _resetRigidBody: 0
+  _resetRigidbody: 0
   _groundCheckOffset: {x: 0, y: -0.6, z: 0}
   _groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16
   _groundCheckRadius: 0.5
 --- !u!70 &1678597581
 CapsuleCollider2D:

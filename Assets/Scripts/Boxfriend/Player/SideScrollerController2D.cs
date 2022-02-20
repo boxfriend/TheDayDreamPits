@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Boxfriend.Input;
@@ -33,11 +31,48 @@ namespace Boxfriend.Player
 
         private InputActions _inputs;
         private float _moveDirection;
+        private bool _canMove = true;
+
+        public static Action OnStatsChange;
 
         /// <summary>
         /// Returns <see langword="true"/> when the player is considered 'Grounded', only updated on physics steps
         /// </summary>
         public bool IsGrounded { get; private set; }
+
+        public float MoveSpeed
+        {
+            get => _moveSpeed;
+            set
+            {
+                _moveSpeed = Mathf.Clamp(value, 3,20);
+                OnStatsChange?.Invoke();
+            }
+        }
+
+        public float JumpPower
+        { 
+            get => _jumpPower; 
+            set 
+            { 
+                _jumpPower = Mathf.Clamp(value, 3, 20); 
+                OnStatsChange?.Invoke(); 
+            } 
+        }
+
+        public bool CanMove
+        {
+            get => _canMove;
+            set
+            {
+                _canMove = value;
+
+                if (_canMove)
+                    _inputs.Enable();
+                else
+                    _inputs.Disable();
+            }
+        }
 
         private void Awake ()
         {

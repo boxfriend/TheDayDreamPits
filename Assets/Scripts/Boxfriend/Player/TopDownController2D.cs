@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Boxfriend.Input;
@@ -21,6 +20,33 @@ namespace Boxfriend.Player
 
         private InputActions _inputs;
         private Vector2 _moveDirection;
+        private bool _canMove = true;
+
+        public static Action OnStatsChange;
+
+        public float MoveSpeed
+        {
+            get => _moveSpeed;
+            set
+            {
+                _moveSpeed = Mathf.Clamp(value, 3, 20);
+                OnStatsChange?.Invoke();
+            }
+        }
+
+        public bool CanMove
+        {
+            get => _canMove;
+            set
+            {
+                _canMove = value;
+
+                if (_canMove)
+                    _inputs.Enable();
+                else
+                    _inputs.Disable();
+            }
+        }
 
         private void Awake ()
         {
