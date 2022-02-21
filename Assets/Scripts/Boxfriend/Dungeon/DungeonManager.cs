@@ -11,7 +11,7 @@ namespace Boxfriend.Dungeon
 
         [SerializeField] private GenerationData _generationData;
 
-        [SerializeField] private List<Room> _rooms;
+        [SerializeField] private RoomLayouts _rooms;
 
         private readonly Dictionary<Vector2, Room> _loadedRooms = new ();
 
@@ -47,13 +47,25 @@ namespace Boxfriend.Dungeon
             foreach (var room in rooms)
             {
                 var roomPos = room.Position * _generationData.RoomOffset;
-                var r = Instantiate(this._rooms[room.LayoutID % _rooms.Count], roomPos, Quaternion.identity,transform);
+                var layout = GetLayout(room);
+                var r = Instantiate(layout, roomPos, Quaternion.identity,transform);
                 _loadedRooms.Add(room.Position, r);
                 r.gameObject.name = room.ToString();
                 r.Info = room;
             }
             RoomsSpawned = true;
             OnRoomsLoaded?.Invoke();
+        }
+
+        private Room GetLayout(RoomInfo info)
+        {
+            return info.Type switch
+            {
+                RoomType.Basic => _rooms.BasicRooms[info.LayoutID % _rooms.BasicRooms.Count],
+                RoomType.Boss => _rooms.BossRooms[info.LayoutID % _rooms.BossRooms.Count],
+                RoomType.Item => _rooms.ItemRooms[info.LayoutID % _rooms.ItemRooms.Count],
+                _ => throw new NotImplementedException()
+            };
         }
 
         public bool TryFindRoom (Vector2 pos) => _loadedRooms.ContainsKey(pos);
