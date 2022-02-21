@@ -15,6 +15,6 @@ MonoBehaviour:
   _basicRooms:
   - {fileID: 309941560416082566, guid: 3a9feb67e14d19741ba5cb28cada5c3d, type: 3}
   _itemRooms:
-  - {fileID: 309941560416082566, guid: 3a9feb67e14d19741ba5cb28cada5c3d, type: 3}
+  - {fileID: 309941560416082566, guid: 5a91beef880ce0a49b77c223f3f1152a, type: 3}
   _bossRooms:
-  - {fileID: 309941560416082566, guid: 3a9feb67e14d19741ba5cb28cada5c3d, type: 3}
+  - {fileID: 309941560416082566, guid: 6758845926d07764f88637c0b5845e75, type: 3}

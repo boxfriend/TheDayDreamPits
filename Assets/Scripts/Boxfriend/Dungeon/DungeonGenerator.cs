@@ -17,15 +17,15 @@ namespace Boxfriend.Dungeon
 			Left = 3
 		}
 		
-		private readonly Dictionary<Direction, Vector2> Directions = new Dictionary<Direction, Vector2>()
+		private readonly Dictionary<Direction, Vector2Int> Directions = new ()
 		{
-			[Direction.Up] = Vector2.up,
-			[Direction.Down] = Vector2.down,
-			[Direction.Right] = Vector2.right,
-			[Direction.Left] = Vector2.left
+			[Direction.Up] = Vector2Int.up,
+			[Direction.Down] = Vector2Int.down,
+			[Direction.Right] = Vector2Int.right,
+			[Direction.Left] = Vector2Int.left
 		};
 
-		private readonly List<Vector2> _visitedPositions = new ();
+		private readonly List<Vector2Int> _visitedPositions = new ();
 		private readonly List<RoomInfo> _generatedRooms = new ();
 		private readonly List<DungeonCrawler> _crawlers = new ();
 		private Random _rng;
@@ -41,9 +41,9 @@ namespace Boxfriend.Dungeon
 
 			SpawnCrawlers(data.Crawlers);
 
-			var startingRoom = new RoomInfo(Vector2.zero, RoomType.Basic, 0, 0);
+			var startingRoom = new RoomInfo(Vector2Int.zero, RoomType.Basic, 0, 0);
 			_generatedRooms.Add(startingRoom);
-			_visitedPositions.Add(Vector2.zero);
+			_visitedPositions.Add(Vector2Int.zero);
 			Debug.Log(startingRoom);
 			
 			GenerateBasicRooms(data.BasicRooms);
@@ -73,7 +73,7 @@ namespace Boxfriend.Dungeon
 				}
 			}
 		}
-		private bool AddRoomPosition (Vector2 position, RoomType type)
+		private bool AddRoomPosition (Vector2Int position, RoomType type)
 		{
 			if (_visitedPositions.Contains(position) || NumberOfNeighbors(position) >= 3 || NumberOfNeighbors(position) <= 0)
 			{
@@ -98,7 +98,7 @@ namespace Boxfriend.Dungeon
 			}
 		}
 
-        private Vector2 GetDirection () => Directions[(Direction)_rng.Next(0, Directions.Count)];
+        private Vector2Int GetDirection () => Directions[(Direction)_rng.Next(0, Directions.Count)];
 
         private void SpawnCrawlers (int crawlersAmount)
 		{
@@ -108,7 +108,7 @@ namespace Boxfriend.Dungeon
 			}
 		}
 
-		private int NumberOfNeighbors (Vector2 position)
+		private int NumberOfNeighbors (Vector2Int position)
 		{
 			var neighbors = 0;
 			foreach (var dir in Directions)
@@ -134,9 +134,9 @@ namespace Boxfriend.Dungeon
 		
 		private class DungeonCrawler
 		{
-			private Vector2 _currentPosition = Vector2.zero;
+			private Vector2Int _currentPosition = Vector2Int.zero;
 
-            public Vector2 NextPosition (Vector2 direction) => _currentPosition += direction;
+            public Vector2Int NextPosition (Vector2Int direction) => _currentPosition += direction;
         }
 	}
 }

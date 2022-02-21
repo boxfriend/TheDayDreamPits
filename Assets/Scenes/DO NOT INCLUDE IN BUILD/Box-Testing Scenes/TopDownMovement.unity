@@ -308,7 +308,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 0.5
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -337,11 +337,11 @@ GameObject:
   - component: {fileID: 1961189616}
   m_Layer: 0
   m_Name: TopDownPlayerTest
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1961189616
 MonoBehaviour:
   m_ObjectHideFlags: 0

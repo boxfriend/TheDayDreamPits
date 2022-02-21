@@ -14,12 +14,12 @@ namespace Boxfriend.Dungeon
 	[Serializable]
 	public struct RoomInfo
 	{
-		public Vector2 Position { get; }
+		public Vector2Int Position { get; }
 		public RoomType Type { get; }
 		public byte LayoutID { get; }
 		public int ID { get; }
 
-		public RoomInfo (Vector2 position, RoomType type, byte layoutID, int roomID)
+		public RoomInfo (Vector2Int position, RoomType type, byte layoutID, int roomID)
 		{
 			Position = position;
 			Type = type;

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0eb6147ff2f224eafbe2fdf90ae8dd, type: 3}
   m_Name: LevelData
   m_EditorClassIdentifier: 
-  _numberOfCrawlers: 3
-  _maxBasicRooms: 20
+  _numberOfCrawlers: 2
+  _maxBasicRooms: 10
   _maxItemRooms: 1
   _maxBossRooms: 1
-  _roomOffset: {x: 1, y: 1}
+  _roomOffset: {x: 16, y: 10}

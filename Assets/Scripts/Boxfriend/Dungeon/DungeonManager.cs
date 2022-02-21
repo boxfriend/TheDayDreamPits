@@ -13,7 +13,7 @@ namespace Boxfriend.Dungeon
 
         [SerializeField] private RoomLayouts _rooms;
 
-        private readonly Dictionary<Vector2, Room> _loadedRooms = new ();
+        private readonly Dictionary<Vector2Int, Room> _loadedRooms = new ();
 
         private readonly DungeonGenerator _dungeonGen = new ();
 
@@ -68,7 +68,7 @@ namespace Boxfriend.Dungeon
             };
         }
 
-        public bool TryFindRoom (Vector2 pos) => _loadedRooms.ContainsKey(pos);
+        public bool TryFindRoom (Vector2Int pos) => _loadedRooms.ContainsKey(pos);
 
 #if !ODIN_INSPECTOR
         [SerializeField] private bool _resetDungeon;

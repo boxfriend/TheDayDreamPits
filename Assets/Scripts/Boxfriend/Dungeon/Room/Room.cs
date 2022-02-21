@@ -8,11 +8,11 @@ namespace Boxfriend.Dungeon
 	public class Room : MonoBehaviour
 	{
 		
-		private static Dictionary<DoorType, Vector2> _direction = new Dictionary<DoorType, Vector2>() {
-			[DoorType.UP] = Vector2.up, 
-			[DoorType.DOWN] = Vector2.down, 
-			[DoorType.LEFT] = Vector2.left, 
-			[DoorType.RIGHT] = Vector2.right
+		private static readonly Dictionary<DoorType, Vector2Int> _direction = new () {
+			[DoorType.UP] = Vector2Int.up, 
+			[DoorType.DOWN] = Vector2Int.down, 
+			[DoorType.LEFT] = Vector2Int.left, 
+			[DoorType.RIGHT] = Vector2Int.right
 		};
 		
 		[SerializeField] private RoomInfo _info;
@@ -38,11 +38,10 @@ namespace Boxfriend.Dungeon
 		{
 			foreach (var (key, value) in _direction)
 			{
-				if (!DungeonManager.Instance.TryFindRoom(Info.Position + value))
-					continue;
+				var roomExists = DungeonManager.Instance.TryFindRoom(Info.Position + value);
 				
-				_doors.Find(item => item.Type == key).gameObject.SetActive(true);
-				_walls.Find(item => item.Type == key).gameObject.SetActive(false);
+				_doors.Find(item => item.Type == key).gameObject.SetActive(roomExists);
+				_walls.Find(item => item.Type == key).gameObject.SetActive(!roomExists);
 			}
 		}
 
