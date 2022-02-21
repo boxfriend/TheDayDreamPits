@@ -13,7 +13,7 @@ namespace Boxfriend.Player
 
         [Header("Components")]
         [SerializeField] private Rigidbody2D _rigidbody2d;
-#if UNITY_EDITOR
+#if UNITY_EDITOR && !ODIN_INSPECTOR
         [SerializeField, Tooltip("Clicking this will reset the rigidbody to my preferred settings. It will then immediately be false again.")]
         private bool _resetRigidbody;
 #endif
@@ -67,7 +67,7 @@ namespace Boxfriend.Player
 
             _moveSpeed = 10;
         }
-
+#if !ODIN_INSPECTOR
         private void OnValidate ()
         {
             if (_resetRigidbody)
@@ -76,8 +76,9 @@ namespace Boxfriend.Player
                 _resetRigidbody = false;
             }
         }
-
-        [ExecuteInEditMode]
+#else
+        [Sirenix.OdinInspector.Button]
+#endif
         private void ResetRB ()
         {
             _rigidbody2d.gravityScale = 0;
