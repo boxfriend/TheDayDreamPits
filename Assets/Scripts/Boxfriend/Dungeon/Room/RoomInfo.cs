@@ -19,8 +19,6 @@ namespace Boxfriend.Dungeon
 		public byte LayoutID { get; }
 		public int ID { get; }
 
-		public static int MaxID => 255;
-
 		public RoomInfo (Vector2 position, RoomType type, byte layoutID, int roomID)
 		{
 			Position = position;
