@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using Random = System.Random;
 using UnityEngine;
+using Boxfriend.Utils;
 
 namespace Boxfriend.Dungeon
 {
-    public class DungeonManager : MonoBehaviour
+    public class DungeonManager : SingletonBehaviour<DungeonManager>
     {
         public static event Action OnRoomsLoaded;
 
@@ -17,30 +18,11 @@ namespace Boxfriend.Dungeon
 
         private readonly DungeonGenerator _dungeonGen = new ();
 
-        public static DungeonManager Instance { get; private set; }
         public bool RoomsSpawned { get; private set; }
 
-        public void Awake ()
-        {
-            if (Instance == null)
-                Instance = this;
-            else
-                Destroy(this);
-        }
-
-        public void Start ()
-        {
-            _dungeonGen.Generate(_generationData);
-        }
-
-        private void OnEnable ()
-        {
-            DungeonGenerator.OnGenerateComplete += OnGenComplete;
-        }
-        private void OnDisable ()
-        {
-            DungeonGenerator.OnGenerateComplete -= OnGenComplete;
-        }
+        public void Start () => _dungeonGen.Generate(_generationData);
+        private void OnEnable () => DungeonGenerator.OnGenerateComplete += OnGenComplete;
+        private void OnDisable () => DungeonGenerator.OnGenerateComplete -= OnGenComplete;
 
         private void OnGenComplete (List<RoomInfo> rooms)
         {

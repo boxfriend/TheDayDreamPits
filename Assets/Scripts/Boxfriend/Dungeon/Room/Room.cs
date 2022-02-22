@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System;
 using Cinemachine;
 using UnityEngine;
 
@@ -24,6 +24,8 @@ namespace Boxfriend.Dungeon
 		[SerializeField] private List<Door> _doors;
 		[SerializeField] private List<Door> _walls;
 		[SerializeField] private CinemachineVirtualCamera _vcam;
+
+		public static event Action<Room> OnRoomEntered;
 
 		public void OnEnable ()
 		{
@@ -50,6 +52,7 @@ namespace Boxfriend.Dungeon
 			if (col.CompareTag("Player"))
 			{
 				_vcam.enabled = true;
+				OnRoomEntered?.Invoke(this);
 			}
 		}
 
