@@ -63,7 +63,7 @@ namespace Boxfriend.Dungeon
             {
                 RoomType.Basic => _rooms.BasicRooms[info.LayoutID % _rooms.BasicRooms.Count],
                 RoomType.Boss => _rooms.BossRooms[info.LayoutID % _rooms.BossRooms.Count],
-                RoomType.Item => _rooms.ItemRooms[info.LayoutID % _rooms.ItemRooms.Count],
+                RoomType.FakeBoss => _rooms.ItemRooms[info.LayoutID % _rooms.ItemRooms.Count],
                 _ => throw new NotImplementedException()
             };
         }

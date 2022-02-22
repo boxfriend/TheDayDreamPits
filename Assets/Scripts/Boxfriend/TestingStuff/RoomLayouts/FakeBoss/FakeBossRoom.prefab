@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 1469860259168943286}
   - component: {fileID: 1879324198887249467}
   m_Layer: 0
-  m_Name: ItemRoom
+  m_Name: FakeBossRoom
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

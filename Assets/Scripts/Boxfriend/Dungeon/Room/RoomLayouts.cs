@@ -8,11 +8,11 @@ namespace Boxfriend.Dungeon
     public class RoomLayouts : ScriptableObject
     {
         [SerializeField] private List<Room> _basicRooms;
-        [SerializeField] private List<Room> _itemRooms;
+        [SerializeField] private List<Room> _fakeBossRooms;
         [SerializeField] private List<Room> _bossRooms;
 
         public List<Room> BasicRooms => _basicRooms;
-        public List<Room> ItemRooms => _itemRooms;
+        public List<Room> ItemRooms => _fakeBossRooms;
         public List<Room> BossRooms => _bossRooms;
     }
 }

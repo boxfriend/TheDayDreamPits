@@ -47,9 +47,9 @@ namespace Boxfriend.Dungeon
 			Debug.Log(startingRoom);
 			
 			GenerateBasicRooms(data.BasicRooms);
-			for (var i = 0; i < data.ItemRooms; i++)
+			for (var i = 0; i < data.FakeBossRooms; i++)
 			{
-				GenerateSpecialRooms(RoomType.Item);
+				GenerateSpecialRooms(RoomType.FakeBoss);
 			}
 			for (var i = 0; i < data.BossRooms; i++)
 			{
@@ -123,7 +123,7 @@ namespace Boxfriend.Dungeon
 
 		private void GenerationComplete (GenerationData data)
 		{
-			Debug.Log($"Generated {data.TotalRooms} rooms. Basic:{data.BasicRooms} Item:{data.ItemRooms} Boss:{data.BossRooms}");
+			Debug.Log($"Generated {data.TotalRooms} rooms. Basic:{data.BasicRooms} Item:{data.FakeBossRooms} Boss:{data.BossRooms}");
 			
 			OnGenerateComplete?.Invoke(_generatedRooms);
 			

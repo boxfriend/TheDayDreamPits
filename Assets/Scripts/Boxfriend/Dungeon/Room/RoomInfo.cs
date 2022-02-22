@@ -6,7 +6,7 @@ namespace Boxfriend.Dungeon
 	public enum RoomType
 	{
 		Basic,
-		Item,
+		FakeBoss,
 		Boss,
 		Secret
 	}
