@@ -30,5 +30,11 @@ namespace Boxfriend.Enemies
             Health = _baseHealth;
             GetComponent<AIPath>().maxSpeed = _baseSpeed;
         }
+
+        private void OnCollisionEnter2D (Collision2D collision)
+        {
+            if(collision.gameObject.TryGetComponent(out IDamageable damage))
+                damage.TakeDamage(_baseDamage);
+        }
     }
 }

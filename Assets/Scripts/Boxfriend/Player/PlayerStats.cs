@@ -14,6 +14,8 @@ namespace Boxfriend.Player
 
         public static event Action<PlayerStats> OnStatsChange;
         public static event Action OnPlayerDeath;
+
+        public int BaseHealth => _baseHealth;
         public int Health
         {
             get => _health;
