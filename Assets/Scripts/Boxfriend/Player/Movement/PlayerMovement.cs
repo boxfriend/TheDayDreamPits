@@ -15,7 +15,7 @@ namespace Boxfriend.Player
         [SerializeField] protected Rigidbody2D _rigidbody2d;
 #if UNITY_EDITOR && !ODIN_INSPECTOR
         [SerializeField, Tooltip("Clicking this will reset the rigidbody to my preferred settings. It will then immediately be false again.")]
-        private bool _resetRigidbody;
+        protected bool _resetRigidbody;
 #endif
 
         protected InputActions _inputs;
@@ -55,6 +55,6 @@ namespace Boxfriend.Player
             _inputs.Enable();
         }
 
-        private void OnMove (InputAction.CallbackContext ctx) => _moveDirection = ctx.ReadValue<Vector2>();
+        protected void OnMove (InputAction.CallbackContext ctx) => _moveDirection = ctx.ReadValue<Vector2>();
     }
 }
