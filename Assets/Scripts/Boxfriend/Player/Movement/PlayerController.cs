@@ -6,7 +6,7 @@ using Boxfriend.Input;
 namespace Boxfriend.Player
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class PlayerMovement : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         [Header("Stats")]
         [SerializeField, Range(6, 20)] protected float _moveSpeed;
@@ -21,6 +21,8 @@ namespace Boxfriend.Player
         protected InputActions _inputs;
         protected Vector2 _moveDirection;
         protected bool _canMove = true;
+
+        public Action<InputAction.CallbackContext> OnAttack;
 
         public float MoveSpeed
         {
@@ -51,10 +53,13 @@ namespace Boxfriend.Player
             _inputs.TopDown.Move.performed += OnMove;
             _inputs.TopDown.Move.canceled += OnMove;
 
+            _inputs.TopDown.Fire.performed += ctx => OnAttack?.Invoke(ctx);
+            _inputs.TopDown.Fire.canceled += ctx => OnAttack?.Invoke(ctx);
 
             _inputs.Enable();
         }
 
         protected void OnMove (InputAction.CallbackContext ctx) => _moveDirection = ctx.ReadValue<Vector2>();
+        protected void Attack (InputAction.CallbackContext ctx) => OnAttack?.Invoke(ctx);
     }
 }

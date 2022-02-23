@@ -6,7 +6,7 @@ using Boxfriend.Input;
 namespace Boxfriend.Player
 {
     
-    public class TopDownController2D : PlayerMovement
+    public class TopDownController2D : PlayerController
     {
         private void FixedUpdate () => _rigidbody2d.AddForce(_moveDirection * _moveSpeed);
 

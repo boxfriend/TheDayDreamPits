@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _basicRooms:
   - {fileID: 309941560416082566, guid: 3a9feb67e14d19741ba5cb28cada5c3d, type: 3}
+  - {fileID: 309941560416082566, guid: a717394f8cdd5574abd96b30b5123dd5, type: 3}
+  - {fileID: 309941560416082566, guid: b05b62a283bc1ff499f6740c3cede882, type: 3}
+  - {fileID: 309941560416082566, guid: e5a49731e293b1d43a07a2c3beb8a3af, type: 3}
   _fakeBossRooms:
   - {fileID: 309941560416082566, guid: 5a91beef880ce0a49b77c223f3f1152a, type: 3}
   _bossRooms:

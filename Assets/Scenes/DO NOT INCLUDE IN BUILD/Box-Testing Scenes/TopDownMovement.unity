@@ -889,7 +889,8 @@ GameObject:
   - component: {fileID: 1961189617}
   - component: {fileID: 1961189622}
   - component: {fileID: 1961189621}
-  m_Layer: 0
+  - component: {fileID: 1961189623}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1013,6 +1014,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _baseHealth: 5
+  _attackCooldown: 0.5
+  _attackSpeed: 4
+  _attackDamage: 1
 --- !u!114 &1961189622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1027,6 +1031,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 10
   _rigidbody2d: {fileID: 1961189618}
+--- !u!114 &1961189623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961189615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e8bdeef9bde154a9ff1313322a82b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectile: {fileID: 1474060139775756500, guid: 1198f5eafdd047144ab15706da96624b, type: 3}
 --- !u!62 &2102121974
 PhysicsMaterial2D:
   m_ObjectHideFlags: 0

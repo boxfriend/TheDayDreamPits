@@ -955,6 +955,15 @@ namespace Boxfriend.Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Fire"",
+                    ""type"": ""Value"",
+                    ""id"": ""204f1b6c-d2ad-4ab5-b2d6-5ed6af72d759"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -1067,6 +1076,61 @@ namespace Boxfriend.Input
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""5b9bf2b6-b6d5-4bf3-b801-f3e01f9758bb"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""1efcc8ef-1a85-400e-b369-2a39ddcf240b"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""f422031d-009a-4baf-887f-63441441adf6"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""e8fec8ad-64b6-4784-8196-7632d1bfe22c"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""e4c902eb-f356-47f6-b66d-889c204d2a21"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -1158,6 +1222,7 @@ namespace Boxfriend.Input
             // TopDown
             m_TopDown = asset.FindActionMap("TopDown", throwIfNotFound: true);
             m_TopDown_Move = m_TopDown.FindAction("Move", throwIfNotFound: true);
+            m_TopDown_Fire = m_TopDown.FindAction("Fire", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -1413,11 +1478,13 @@ namespace Boxfriend.Input
         private readonly InputActionMap m_TopDown;
         private ITopDownActions m_TopDownActionsCallbackInterface;
         private readonly InputAction m_TopDown_Move;
+        private readonly InputAction m_TopDown_Fire;
         public struct TopDownActions
         {
             private @InputActions m_Wrapper;
             public TopDownActions(@InputActions wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_TopDown_Move;
+            public InputAction @Fire => m_Wrapper.m_TopDown_Fire;
             public InputActionMap Get() { return m_Wrapper.m_TopDown; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -1430,6 +1497,9 @@ namespace Boxfriend.Input
                     @Move.started -= m_Wrapper.m_TopDownActionsCallbackInterface.OnMove;
                     @Move.performed -= m_Wrapper.m_TopDownActionsCallbackInterface.OnMove;
                     @Move.canceled -= m_Wrapper.m_TopDownActionsCallbackInterface.OnMove;
+                    @Fire.started -= m_Wrapper.m_TopDownActionsCallbackInterface.OnFire;
+                    @Fire.performed -= m_Wrapper.m_TopDownActionsCallbackInterface.OnFire;
+                    @Fire.canceled -= m_Wrapper.m_TopDownActionsCallbackInterface.OnFire;
                 }
                 m_Wrapper.m_TopDownActionsCallbackInterface = instance;
                 if (instance != null)
@@ -1437,6 +1507,9 @@ namespace Boxfriend.Input
                     @Move.started += instance.OnMove;
                     @Move.performed += instance.OnMove;
                     @Move.canceled += instance.OnMove;
+                    @Fire.started += instance.OnFire;
+                    @Fire.performed += instance.OnFire;
+                    @Fire.canceled += instance.OnFire;
                 }
             }
         }
@@ -1513,6 +1586,7 @@ namespace Boxfriend.Input
         public interface ITopDownActions
         {
             void OnMove(InputAction.CallbackContext context);
+            void OnFire(InputAction.CallbackContext context);
         }
     }
 }

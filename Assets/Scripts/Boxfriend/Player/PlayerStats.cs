@@ -3,12 +3,15 @@ using UnityEngine;
 
 namespace Boxfriend.Player
 {
-    [RequireComponent(typeof(PlayerMovement))]
+    [RequireComponent(typeof(PlayerController))]
     public class PlayerStats : MonoBehaviour, IDamageable, IKillable, IHealable
     {
         [SerializeField] private int _baseHealth;
+        [SerializeField] private float _attackCooldown;
+        [SerializeField] private float _attackSpeed;
+        [SerializeField] private int _attackDamage;
 
-        private PlayerMovement _movement;
+        private PlayerController _movement;
 
         private int _health;
 
@@ -39,9 +42,13 @@ namespace Boxfriend.Player
             }
         }
 
+        public float AttackCooldown => _attackCooldown;
+        public int Damage => _attackDamage;
+        public float AttackSpeed => _attackSpeed;
+
         private void Awake ()
         {
-            _movement = GetComponent<PlayerMovement>();
+            _movement = GetComponent<PlayerController>();
             Health = _baseHealth;
         }
 

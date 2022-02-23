@@ -6,7 +6,7 @@ using Boxfriend.Input;
 namespace Boxfriend.Player
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class SideScrollerController2D : PlayerMovement
+    public class SideScrollerController2D : PlayerController
     {
         [Header("Stats")]
         [SerializeField, Range(6, 20),Tooltip("Amount of power for a jump, same as Move Speed usually feels decent")] 
