@@ -183,13 +183,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Congratulations.
 
-    You made it out.
+    You completed your goal.
 
 
-    But did any of it matter?
+    But did any of it
+    matter?
 
-    Was
-    any of it real?
+    Was any of it real?
 
 '
   m_isRightToLeft: 0

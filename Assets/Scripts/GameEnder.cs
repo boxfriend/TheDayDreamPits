@@ -6,7 +6,7 @@ public class GameEnder : MonoBehaviour
 {
     private void Awake ()
     {
-        PlayerWinCondition.OnPlayerWin += () => SceneManager.LoadScene("TheEnd");
+        PlayerWinCondition.OnPlayerWin += () => SceneManager.LoadScene("TheEnd", LoadSceneMode.Single);
         PlayerStats.OnPlayerDeath += () => SceneManager.LoadScene("Death", LoadSceneMode.Additive);
     }
 }

@@ -11,6 +11,7 @@ namespace Boxfriend.Player
         private void Awake ()
         {
             _stats = GetComponent<PlayerStats>();
+            Item.OnItemPickup += CollectCoin;
         }
 
         private void CollectCoin(Item item)
