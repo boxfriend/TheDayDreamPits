@@ -244,8 +244,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: WASD TO MOVE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ffd1b1c94c094d438da9fbc8366850f, type: 2}
+  m_sharedMaterial: {fileID: -3505833060631112777, guid: 3ffd1b1c94c094d438da9fbc8366850f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -511,8 +511,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ARROWS TO SHOOT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ffd1b1c94c094d438da9fbc8366850f, type: 2}
+  m_sharedMaterial: {fileID: -3505833060631112777, guid: 3ffd1b1c94c094d438da9fbc8366850f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -646,8 +646,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Don't let what isn't real overwhelm you
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ffd1b1c94c094d438da9fbc8366850f, type: 2}
+  m_sharedMaterial: {fileID: -3505833060631112777, guid: 3ffd1b1c94c094d438da9fbc8366850f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1088,6 +1088,7 @@ MonoBehaviour:
   _dontDestroy: 0
   _generationData: {fileID: 11400000, guid: ec92d2f9cf7e1dc438aa8810f9cb310f, type: 2}
   _rooms: {fileID: 11400000, guid: 81fea5ad1106fd84e92979245abcf4a8, type: 2}
+  _resetDungeon: 0
 --- !u!4 &1021003919
 Transform:
   m_ObjectHideFlags: 0
@@ -1584,6 +1585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 10
   _rigidbody2d: {fileID: 1961189618}
+  _resetRigidbody: 0
 --- !u!114 &1961189623
 MonoBehaviour:
   m_ObjectHideFlags: 0
