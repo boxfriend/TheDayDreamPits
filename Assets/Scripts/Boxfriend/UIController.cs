@@ -24,5 +24,6 @@ namespace Boxfriend
             padding.z = (player.BaseHealth - player.Health) * _healthPieceSize;
             _healthMask.padding = padding;
         }
+
     }
 }

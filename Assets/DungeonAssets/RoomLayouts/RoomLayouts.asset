@@ -17,7 +17,14 @@ MonoBehaviour:
   - {fileID: 309941560416082566, guid: a717394f8cdd5574abd96b30b5123dd5, type: 3}
   - {fileID: 309941560416082566, guid: b05b62a283bc1ff499f6740c3cede882, type: 3}
   - {fileID: 309941560416082566, guid: e5a49731e293b1d43a07a2c3beb8a3af, type: 3}
+  - {fileID: 309941560416082566, guid: 86cb01053fef2664abc1e628311f1a9c, type: 3}
+  - {fileID: 309941560416082566, guid: b6bdff08acccb5a45b601097af3eba4b, type: 3}
+  - {fileID: 309941560416082566, guid: e82075956a7cfac429b579b27e025190, type: 3}
+  - {fileID: 309941560416082566, guid: 8c252a32e02b2004bacc6d6317cc8704, type: 3}
   _fakeBossRooms:
   - {fileID: 309941560416082566, guid: 5a91beef880ce0a49b77c223f3f1152a, type: 3}
+  - {fileID: 309941560416082566, guid: d50d3296c2ffcbb46ac55a1ccdd88e43, type: 3}
+  - {fileID: 309941560416082566, guid: b1c723dfa49156c478d2432eb969360e, type: 3}
+  - {fileID: 309941560416082566, guid: 10b40d502c8f01242b8576c73547870c, type: 3}
   _bossRooms:
   - {fileID: 309941560416082566, guid: 6758845926d07764f88637c0b5845e75, type: 3}

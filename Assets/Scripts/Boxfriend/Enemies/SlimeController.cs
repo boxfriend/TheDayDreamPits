@@ -16,6 +16,7 @@ namespace Boxfriend.Enemies
         {
             _animator.SetTrigger("Death");
             _path.canMove = false;
+            _path.enabled = false;
 
             if(TryGetComponent(out Collider2D collider))
                 collider.enabled = false;

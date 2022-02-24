@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 532529362}
   - component: {fileID: 532529364}
   - component: {fileID: 532529363}
-  - component: {fileID: 532529365}
   - component: {fileID: 4756664253868489398}
-  - component: {fileID: 1592844964204901526}
   m_Layer: 8
   m_Name: SlimeControls
   m_TagString: Untagged
@@ -108,39 +106,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!60 &532529365
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532529361}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 2.05}
-    newSize: {x: 3.2, y: 2.05}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.1, y: -0.475}
-      - {x: -0.3, y: -0.675}
-      - {x: -0.3, y: -0.875}
-      - {x: -0.25, y: -0.975}
-      - {x: 0.35, y: -0.975}
-      - {x: 0.4, y: -0.875}
-      - {x: 0.4, y: -0.675}
-      - {x: 0.2, y: -0.475}
 --- !u!114 &4756664253868489398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,21 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 532529363}
   _path: {fileID: 4947356842785383155}
---- !u!114 &1592844964204901526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532529361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306329400f761eb4bb641d62ed4824e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _baseHealth: 3
-  _baseSpeed: 2
-  _baseDamage: 1
 --- !u!1 &4947356842785383164
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,13 +129,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4947356842785383152}
-  - component: {fileID: 4947356842785383166}
   - component: {fileID: 4947356842785383157}
   - component: {fileID: 4947356842785383154}
   - component: {fileID: 4947356842785383155}
   - component: {fileID: 2920226803757915735}
   m_Layer: 8
-  m_Name: Slime
+  m_Name: FakeSlime
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,27 +156,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &4947356842785383166
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4947356842785383164}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.5
-  m_LinearDrag: 1
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &4947356842785383157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,8 +214,8 @@ MonoBehaviour:
   radius: 0.3
   height: 2
   canMove: 1
-  maxSpeed: 1
-  gravity: {x: NaN, y: NaN, z: NaN}
+  maxSpeed: 2
+  gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295

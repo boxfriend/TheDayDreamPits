@@ -5,7 +5,7 @@ namespace Boxfriend.Items
     public class HealthItem : Item
     {
         [SerializeField] private int _healAmount;
-        private void OnTriggerEnter2D (Collider2D collision)
+        protected override void OnTriggerEnter2D (Collider2D collision)
         {
             if (collision.TryGetComponent(out IHealable heal))
             {
