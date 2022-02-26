@@ -772,7 +772,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Don't let what isn't real overwhelm you
+  m_text: 'Find the real coin
+
+    Don''t let what isn''t real overwhelm you'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ffd1b1c94c094d438da9fbc8366850f, type: 2}
   m_sharedMaterial: {fileID: -3505833060631112777, guid: 3ffd1b1c94c094d438da9fbc8366850f, type: 2}
