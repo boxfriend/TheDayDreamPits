@@ -23,6 +23,7 @@ namespace Boxfriend.Player
         protected bool _canMove = true;
 
         public Action<InputAction.CallbackContext> OnAttack;
+        public Action<Vector2> OnMove;
 
         public float MoveSpeed
         {
@@ -50,8 +51,8 @@ namespace Boxfriend.Player
         protected virtual void Awake ()
         {
             _inputs = new InputActions();
-            _inputs.TopDown.Move.performed += OnMove;
-            _inputs.TopDown.Move.canceled += OnMove;
+            _inputs.TopDown.Move.performed += OnMoveInput;
+            _inputs.TopDown.Move.canceled += OnMoveInput;
 
             _inputs.TopDown.Fire.performed += ctx => OnAttack?.Invoke(ctx);
             _inputs.TopDown.Fire.canceled += ctx => OnAttack?.Invoke(ctx);
@@ -59,7 +60,12 @@ namespace Boxfriend.Player
             _inputs.Enable();
         }
 
-        protected void OnMove (InputAction.CallbackContext ctx) => _moveDirection = ctx.ReadValue<Vector2>();
+        protected void OnMoveInput (InputAction.CallbackContext ctx)
+        {
+            _moveDirection = ctx.ReadValue<Vector2>();
+            OnMove?.Invoke(_moveDirection);
+        }
+
         protected void Attack (InputAction.CallbackContext ctx) => OnAttack?.Invoke(ctx);
     }
 }
