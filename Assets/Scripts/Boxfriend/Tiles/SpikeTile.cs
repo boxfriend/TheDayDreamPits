@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using Boxfriend.Dungeon;
 
 namespace Boxfriend.Tiles
 {
@@ -8,7 +9,13 @@ namespace Boxfriend.Tiles
         [SerializeField] private Animator _animator;
         private bool _isActive;
 
-        private void Start () => StartCoroutine(SpikeDelay());
+        private void Start ()
+        {
+            if(transform.localPosition == Vector3.zero)
+                Destroy(gameObject);
+
+            StartCoroutine(SpikeDelay());
+        }
 
         private IEnumerator SpikeDelay()
         {
