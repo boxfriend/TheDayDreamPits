@@ -3,7 +3,7 @@
 
 This was a submission for Brackeys Game Jam 2022.1. The theme for this jam was "it is not real" and the length of the jam was 7 days.
 
-We had some setbacks early on in the week with the majority of the team (including the original team leader) dropping out without contributing much. Despite that, we were able to put together a pretty decent project with just two members of the team left. Unfortunately the original repo is stuck as private since I had to fork it from the repo that was created by the original team leader so commit history is not available.
+We had some setbacks early on in the week with the majority of the team (including the original team leader) dropping out without contributing much. Despite that, we were able to put together a pretty decent project with just two members of the team left.
 
 ### Credits:
 
