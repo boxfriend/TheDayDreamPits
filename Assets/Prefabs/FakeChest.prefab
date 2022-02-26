@@ -123,6 +123,7 @@ MonoBehaviour:
   _spawnItem: {fileID: 1347553410292858487, guid: c5ee52395d0233f41b5851eefb7c1ca1, type: 3}
   _animator: {fileID: 5122239020175748868}
   _spawnPosition: {fileID: 1578985932361459637}
+  _isEmpty: 0
 --- !u!61 &4393949536043554216
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1218,7 +1218,6 @@ MonoBehaviour:
   _dontDestroy: 0
   _generationData: {fileID: 11400000, guid: ec92d2f9cf7e1dc438aa8810f9cb310f, type: 2}
   _rooms: {fileID: 11400000, guid: 81fea5ad1106fd84e92979245abcf4a8, type: 2}
-  _resetDungeon: 0
 --- !u!4 &1021003919
 Transform:
   m_ObjectHideFlags: 0
@@ -1772,7 +1771,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 10
   _rigidbody2d: {fileID: 1961189618}
-  _resetRigidbody: 0
 --- !u!114 &1961189623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1798,8 +1796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884b152dd1610e84291ba2266e778209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!70 &1961189625
-CapsuleCollider2D:
+--- !u!58 &1961189625
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1811,9 +1809,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.35, y: 0.75}
-  m_Direction: 0
+  m_Offset: {x: 0, y: -0.25}
+  serializedVersion: 2
+  m_Radius: 0.2
 --- !u!62 &2102121974
 PhysicsMaterial2D:
   m_ObjectHideFlags: 0
