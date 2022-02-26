@@ -12,7 +12,7 @@ namespace Boxfriend.Tiles
 
         private IEnumerator SpikeDelay()
         {
-            var delay = Random.Range(1f, 10f);
+            var delay = Random.Range(2f, 10f);
             yield return new WaitForSeconds(delay);
             ToggleActive();
         }
