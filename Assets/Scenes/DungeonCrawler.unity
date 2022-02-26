@@ -351,7 +351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+uZNjHYXAIAABMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VEtz2jAQ/iuMzk3HhiTEvbWEkB4SmJBOLr7I1hprkCWPHuE1/PeuZBs7dHpi+fbb3W8f8olwaWrIrdILzdmLYkB+jIi3ybdR73yGPd0oueZH6DgfnNnSk2jgvFHLFeKxDzOqAqt5/lNuhCdHCDrJC6WrOdvATBlrEC6oMIAurayPlgidRmSPPzeJDzmgNZ5664hWEo3OaOYgLeie2hE7WsNyMhe0qoF5yT05vm/ZcUOT2EzLiL7f+exKCG5aLcQe6tDrui5Bg2+WcYqthfq+0xL4prRe5jB2WRQGbKtJ08Mj1zihJin5pZqxVdRsG2GfVDhfJk7GQVST9OUf/00c3IVW1XNXN458DVvyfPtGDzk1djDXIfz4VbiTOyq2NBPwUYJ8VQutnGTotNr5UGdg/Nj/vbQ2KyHf9ngj9Qp09f+343s4h+73M8GrLAz+tgHWQoVxh92DxtX8RsHhMkybAlGv4o+Bd7oZnlDreOLaWHS1XUovL1NOeyqZh5n5bpydKS0hwK3oGiQV9rDCNPZ6hVe+QdkrzxP1j6Ut3vq6N3AVEuCeH0VXrpXaXZZlSrV7AVMunRVcQi/aO15xTjMlZXNhw5l0YWunC5oPwjaOs6+nReJsnCV4gPeTu+Qhm2Q3t3B/R5NkOi6mEZuwBxJuj0vsk4pVI7QdD25N9skl3ln3DRktNK3DtTNNdwt+rNRg5FwWap1rALlsMlyEg8Yi+CzZnHEc0Bqs5TLsm5xSIlS+BZZeEqWh0/neapr2WVJS809lPZKSWfhopMTDl1teafjksPPFu2Rncv4LUEsDBBQAAAgIAACYn+ttHyTLbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSYZJRkqWhpZGZsamlRZJxkq5JqplpoqWluVGauUGKcYqFUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACYn+uZNjHYXAIAABMFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+ttHyTLbQAAAHgAAAAJACQAAAAAAAAAAAAAAKkCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
+    dataString: UEsDBBQAAAgIAMArIeyZNjHYXAIAABMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VEtz2jAQ/iuMzk3HhiTEvbWEkB4SmJBOLr7I1hprkCWPHuE1/PeuZBs7dHpi+fbb3W8f8olwaWrIrdILzdmLYkB+jIi3ybdR73yGPd0oueZH6DgfnNnSk2jgvFHLFeKxDzOqAqt5/lNuhCdHCDrJC6WrOdvATBlrEC6oMIAurayPlgidRmSPPzeJDzmgNZ5664hWEo3OaOYgLeie2hE7WsNyMhe0qoF5yT05vm/ZcUOT2EzLiL7f+exKCG5aLcQe6tDrui5Bg2+WcYqthfq+0xL4prRe5jB2WRQGbKtJ08Mj1zihJin5pZqxVdRsG2GfVDhfJk7GQVST9OUf/00c3IVW1XNXN458DVvyfPtGDzk1djDXIfz4VbiTOyq2NBPwUYJ8VQutnGTotNr5UGdg/Nj/vbQ2KyHf9ngj9Qp09f+343s4h+73M8GrLAz+tgHWQoVxh92DxtX8RsHhMkybAlGv4o+Bd7oZnlDreOLaWHS1XUovL1NOeyqZh5n5bpydKS0hwK3oGiQV9rDCNPZ6hVe+QdkrzxP1j6Ut3vq6N3AVEuCeH0VXrpXaXZZlSrV7AVMunRVcQi/aO15xTjMlZXNhw5l0YWunC5oPwjaOs6+nReJsnCV4gPeTu+Qhm2Q3t3B/R5NkOi6mEZuwBxJuj0vsk4pVI7QdD25N9skl3ln3DRktNK3DtTNNdwt+rNRg5FwWap1rALlsMlyEg8Yi+CzZnHEc0Bqs5TLsm5xSIlS+BZZeEqWh0/neapr2WVJS809lPZKSWfhopMTDl1teafjksPPFu2Rncv4LUEsDBBQAAAgIAMArIextHyTLbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSYZJRkqWhpZGZsamlRZJxkq5JqplpoqWluVGauUGKcYqFUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAMArIeyZNjHYXAIAABMFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAMArIextHyTLbQAAAHgAAAAJACQAAAAAAAAAAAAAAKkCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -613,7 +613,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 719b5a91707c03247a1ea589f3c197ff, type: 2}
-  m_audioClip: {fileID: 8300000, guid: d623428ada8c6d6438066fcb58310adb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b5a83d870cbb7c249b9cc772c4504913, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1218,6 +1218,7 @@ MonoBehaviour:
   _dontDestroy: 0
   _generationData: {fileID: 11400000, guid: ec92d2f9cf7e1dc438aa8810f9cb310f, type: 2}
   _rooms: {fileID: 11400000, guid: 81fea5ad1106fd84e92979245abcf4a8, type: 2}
+  _resetDungeon: 0
 --- !u!4 &1021003919
 Transform:
   m_ObjectHideFlags: 0
@@ -1734,7 +1735,7 @@ Transform:
   m_GameObject: {fileID: 1961189615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1260185985}
@@ -1771,6 +1772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 10
   _rigidbody2d: {fileID: 1961189618}
+  _resetRigidbody: 0
 --- !u!114 &1961189623
 MonoBehaviour:
   m_ObjectHideFlags: 0
